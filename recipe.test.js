@@ -54,6 +54,6 @@ describe("Recipe", function () {
 
     // disconnect from Mongo after all tests have been run
     afterAll( (done) => {
-      mongoose.disconnect();
+      mongoose.disconnect().then(done);
     });
 });
